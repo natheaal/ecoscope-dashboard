@@ -1,52 +1,53 @@
-# EcoScope — Dashboard di monitoraggio ambientale
+# EcoScope — Environmental Monitoring Dashboard
 
-Dashboard interattiva per la visualizzazione di dati di qualità dell'aria urbana, costruita con **React** e **Next.js**.
+Interactive dashboard for visualizing urban air quality data, built with **React** and **Next.js**.
 
-Progetto dimostrativo realizzato per approfondire lo stack frontend moderno (componenti riutilizzabili, gestione dello stato, data visualization, design responsive) in vista di ruoli da Frontend Developer.
+Demo project developed to deepen my knowledge of the modern frontend stack (reusable components, state management, data visualization, responsive design) in preparation for Frontend Developer roles.
 
-## Funzionalità
+## Features
 
-- Selezione di stazioni di monitoraggio su una mappa interattiva (SVG) e da un elenco laterale
-- Visualizzazione dell'indice di qualità dell'aria (AQI) in tempo reale con codifica colore per livello
-- Grafici di trend (24h) per AQI, temperatura e umidità con [Recharts](https://recharts.org/)
-- Layout completamente responsive (desktop, tablet, mobile)
-- Dati simulati in modo deterministico (nessuna API esterna richiesta per l'esecuzione)
+* Selection of monitoring stations on an interactive map (SVG) and from a sidebar list
+* Real-time air quality index (AQI) visualization with color coding by severity level
+* 24-hour trend charts for AQI, temperature, and humidity using [Recharts](https://recharts.org/)
+* Fully responsive layout (desktop, tablet, mobile)
+* Deterministically simulated data (no external API required to run the project)
 
-## Stack tecnico
+## Tech Stack
 
-- **Next.js 16** (App Router)
-- **React 19**
-- **Tailwind CSS 4**
-- **Recharts** per la data visualization
-- **lucide-react** per le icone
-- Font self-hosted (`@fontsource/fraunces`, `@fontsource/ibm-plex-sans`) — nessuna chiamata a servizi esterni
+* **Next.js 16** (App Router)
+* **React 19**
+* **Tailwind CSS 4**
+* **Recharts** for data visualization
+* **lucide-react** for icons
+* Self-hosted fonts (`@fontsource/fraunces`, `@fontsource/ibm-plex-sans`) — no external service requests
 
-## Struttura del progetto
+## Project Structure
 
-```
+```text
 app/
-  layout.js        # layout globale, font, metadata
-  page.js          # entry point della home
-  globals.css      # design tokens e stili globali
+  layout.js        # global layout, fonts, metadata
+  page.js          # home entry point
+  globals.css      # design tokens and global styles
 components/
-  Dashboard.jsx    # componente principale, gestisce stato e layout
-  StationMap.jsx   # mappa interattiva delle stazioni (SVG)
-  TrendChart.jsx   # grafico di trend riutilizzabile
+  Dashboard.jsx    # main component, handles state and layout
+  StationMap.jsx   # interactive station map (SVG)
+  TrendChart.jsx   # reusable trend chart
 lib/
-  data.js          # generazione dati mock deterministici
+  data.js          # deterministic mock data generation
 ```
 
-## Avvio in locale
+## Running Locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Apri http://localhost:3000
+Open http://localhost:3000
 
-## Possibili sviluppi futuri
+## Potential Future Developments
 
-- Integrazione con API reali di qualità dell'aria (es. OpenAQ)
-- Persistenza dati e storico su database
-- Test con Jest / React Testing Library
+* Integration with real air quality APIs (e.g. OpenAQ)
+* Data persistence and historical data storage using a database
+* Testing with Jest / React Testing Library
+
